@@ -1,0 +1,13 @@
+.bikes_container{
+    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    border: black solid 3px;
+}
+
+.bike_container{
+
+    margin: 5px;
+}
+
+

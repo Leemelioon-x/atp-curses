@@ -1,0 +1,17 @@
+.filterBarByTypeContainer{
+    margin: 5px;
+}
+
+.filterBarByTypeVisibleFalse{
+    width: 300px;
+    height: 40px;
+    background: brown;
+    transition: 0.5s;
+}
+
+.filterBarByTypeVisibleTrue{
+    width: 300px;
+    height: 200px;
+    background: blueviolet;
+    transition: 0.5s;
+}

@@ -1,0 +1,18 @@
+.filterBarByPriceContainer{
+    margin: 5px ;
+}
+
+.filterBarByPriceVisibleFalse{
+    width: 300px;
+    height: 40px;
+    background: brown;
+    transition: 0.5s;
+}
+
+.filterBarByPriceVisibleTrue{
+    width: 300px;
+    height: 200px;
+    background: blueviolet;
+    transition: 0.5s;
+}
+
