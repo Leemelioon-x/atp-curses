@@ -1,11 +1,11 @@
 .filterBarContainer{
 display: flex;
+
 }
 
 .filterBarMenuTrue{
     background: #61dafb;
     width: 350px;
-    height: 700px;
     transition: 0.5s;
 }
 
@@ -13,18 +13,15 @@ display: flex;
     display: flex;
     background: brown;
     width: 30px;
-    height: 700px;
     transition: 0.5s;
     align-items: center;
     justify-content: center;
 }
 
 .filterBarMenuContainer{
-
     display: flex;
     justify-content: center;
     transition: 0.5s;
-
 }
 
 .filterBarMenuContainerItems{

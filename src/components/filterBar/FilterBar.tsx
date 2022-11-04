@@ -3,22 +3,21 @@ import classes from "./FilterBar.module.css";
 import MyButton from "../myButton/MyButton";
 import FilterBarByPrice from "./filterBarByPrice/FilterBarByPrice";
 import {FilterBarByType} from "./filterBarByType/FilterBarByType";
-
-
+import {FilterBarByBrand} from "./filterBarByBrand/FilterBarByBrand";
+import {FilterBarByWheelSize} from "./filterBarByWheelSize/FilterBarByWheelSize";
+import {FilterBarByTypeContainer} from "./filterBarByType/FilterBarByTypeContainer";
 
 
 const FilterBar = () => {
     const [filterBarVisible, setFilterBarVisible] = useState<boolean>(true)
 
 
-   /* const [filterBarByWheelSizeVisible, setFilterBarByWheelSizeVisible] = useState<boolean>(true)
-    const [filterBarByTypeVisible, setFilterBarByTypeVisible] = useState<boolean>(true)
-    const [filterBarByBrandVisible, setFilterBarByBrandVisible] = useState<boolean>(true)*/
+    /* const [filterBarByWheelSizeVisible, setFilterBarByWheelSizeVisible] = useState<boolean>(true)
+     const [filterBarByTypeVisible, setFilterBarByTypeVisible] = useState<boolean>(true)
+     const [filterBarByBrandVisible, setFilterBarByBrandVisible] = useState<boolean>(true)*/
     const onButtonClickHandler = () => {
         setFilterBarVisible(!filterBarVisible)
     }
-
-
 
 
     return (
@@ -29,8 +28,10 @@ const FilterBar = () => {
 
                     <div className={classes.filterBarMenuContainer}>
                         <div className={classes.filterBarMenuContainerItems}>
-                        <FilterBarByPrice/>
-                        <FilterBarByType/>
+                            <FilterBarByPrice/>
+                            <FilterBarByTypeContainer/>
+                            <FilterBarByBrand/>
+                            <FilterBarByWheelSize/>
                         </div>
 
                     </div>

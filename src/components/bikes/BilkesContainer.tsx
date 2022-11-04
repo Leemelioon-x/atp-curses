@@ -21,7 +21,9 @@ const mapStateToProps=(state:storeType):mapStateToPropsType=>{
 }
 
 const mapDispatchToProps=(dispatch:Dispatch):mapDispatchToProps=>{
-    return {}
+    return {
+
+    }
 }
 
 

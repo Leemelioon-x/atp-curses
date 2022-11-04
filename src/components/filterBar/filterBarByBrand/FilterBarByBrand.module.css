@@ -1,24 +1,24 @@
-.filterBarByPriceContainer{
+.filterBarByBrandContainer{
     margin: 5px ;
     border: black solid 2px;
     background: brown;
 }
 
-.filterBarByPriceVisibleFalse{
+.filterBarByBrandVisibleFalse{
     width: 300px;
     height: 40px;
     background: brown;
     transition: 0.5s;
 }
 
-.filterBarByPriceVisibleTrue{
+.filterBarByBrandVisibleTrue{
     width: 300px;
-    height: 200px;
+    height: 70px;
     background: blueviolet;
     transition: 0.5s;
 }
 
-.openCloseFilterBarByPrice{
+.openCloseFilterBarByBrand{
     border-top: solid black 2px;
 }
 
