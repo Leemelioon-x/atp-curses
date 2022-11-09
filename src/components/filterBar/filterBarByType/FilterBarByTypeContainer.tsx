@@ -3,28 +3,26 @@ import {Dispatch} from "redux";
 import {connect} from "react-redux";
 import {storeType} from "../../../redux/redux-store";
 import {FilterBarByType} from "./FilterBarByType";
-import {bikeType, changeBikesFilterTypeAC} from "../../../redux/BikesPage-reducer";
+import {bikeType, changeBikesFilterTypeAC, filterTypeValue} from "../../../redux/BikesPage-reducer";
 
 
 type mapStateToPropsType={
-    bikesFilterType:Array<bikeType>
+
 }
 type mapDispatchToProps={
-    filterChangeMenuBarType:(filterType:string)=>void
+    filterChangeMenuBarType:(filterType:filterTypeValue)=>void
 }
 
 
 const mapStateToProps=(state:storeType):mapStateToPropsType=>{
     return{
-        bikesFilterType:state.bikesPageReducer.bike
     }
 }
 
 const mapDispatchToProps=(dispatch:Dispatch):mapDispatchToProps=>{
     return {
-        filterChangeMenuBarType:(filterType:string)=>{
-            console.log(filterType)
-                dispatch(changeBikesFilterTypeAC(filterType))
+        filterChangeMenuBarType:(filterTypeValue:filterTypeValue)=>{
+                dispatch(changeBikesFilterTypeAC(filterTypeValue))
            }
     }
 }

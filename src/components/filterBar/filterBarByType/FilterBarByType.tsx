@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import classes from "./FilterBarByType.module.css";
 import {MyCheckBox} from "../../myCheckBox/MyCheckBox";
-import {bikeType} from "../../../redux/BikesPage-reducer";
+import {bikeType, filterTypeValue} from "../../../redux/BikesPage-reducer";
 
 type FilterBarByTypePropsType = {
 
-    filterChangeMenuBarType:(filterType:string)=>void
+    filterChangeMenuBarType:(filterType:filterTypeValue)=>void
 }
 
 export const FilterBarByType = ({filterChangeMenuBarType}: FilterBarByTypePropsType) => {
