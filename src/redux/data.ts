@@ -37,5 +37,8 @@ export const data:initialStateType = {
     filterTypeValue:"all",
     filterBrandType:"all",
     filterWheelSize:"all",
-    searchValue:""
+    searchValue:"",
+    sortedPriceValue:"all",
+    priceValue:0
+
 }

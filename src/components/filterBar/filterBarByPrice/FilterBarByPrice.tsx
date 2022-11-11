@@ -1,10 +1,15 @@
 import React, {useState} from 'react';
 import classes from "./FilterBarByPrice.module.css";
-import {MyCheckBox} from "../../myCheckBox/MyCheckBox";
+import SuperRange from "../../c7-SuperRange/SuperRange";
+
+
 type FilterBarByPricePropsType={
+    priceValue: number,
+    filteredByPrice:(priceValue:number)=>void
+
 }
 
-const FilterBarByPrice = (props:FilterBarByPricePropsType) => {
+const FilterBarByPrice = ({filteredByPrice,priceValue}:FilterBarByPricePropsType) => {
     const [filterBarByPriceVisible, setFilterBarByPriceVisible] = useState<boolean>(false)
 
 
@@ -13,6 +18,8 @@ return (
         <div>
             {filterBarByPriceVisible ? <div className={classes.filterBarByPriceVisibleTrue}>Filter by price <div>
                 </div>
+                {priceValue}
+                <SuperRange onChangeRange={filteredByPrice} min={0} max={2000}/>
                 </div>
                 :
                 <div className={classes.filterBarByPriceVisibleFalse}>Filter by price</div>}

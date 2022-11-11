@@ -8,6 +8,7 @@ import {FilterBarByWheelSize} from "./filterBarByWheelSize/FilterBarByWheelSize"
 import {FilterBarByTypeContainer} from "./filterBarByType/FilterBarByTypeContainer";
 import {FilterBarByBrandContainer} from "./filterBarByBrand/FilterBarByBrandContainer";
 import {FilterBarByWheelSizeContainer} from "./filterBarByWheelSize/FilterBarByWheelSizeContainer";
+import {FilterPriceContainer} from "./filterBarByPrice/FilterPriceContainer";
 
 
 const FilterBar = () => {
@@ -30,7 +31,7 @@ const FilterBar = () => {
 
                     <div className={classes.filterBarMenuContainer}>
                         <div className={classes.filterBarMenuContainerItems}>
-                            <FilterBarByPrice/>
+                            <FilterPriceContainer/>
                             <FilterBarByTypeContainer/>
                             <FilterBarByBrandContainer/>
                             <FilterBarByWheelSizeContainer/>

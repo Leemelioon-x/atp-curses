@@ -7,15 +7,19 @@ type BikesPropsType = {
     filterTypeValue: filterTypeValue,
     filterBrandTypeValue: filterBrandTypeValue,
     filterWheelSizeValue: filterWheelSizeValue,
-    searchValue:string
+    searchValue:string,
+    priceValue:number
 }
 
-export const Bikes = ({bikes, filterTypeValue, filterBrandTypeValue, filterWheelSizeValue,searchValue}: BikesPropsType) => {
+export const Bikes = ({bikes, filterTypeValue, filterBrandTypeValue, filterWheelSizeValue,searchValue,priceValue}: BikesPropsType) => {
 
     bikes = filterTypeValue === "all" ? [...bikes] : bikes.filter(el => el.type === filterTypeValue)
     bikes = filterBrandTypeValue === "all" ? [...bikes] : bikes.filter(el => el.brand === filterBrandTypeValue)
     bikes = filterWheelSizeValue === "all" ? [...bikes] : bikes.filter((el, index) => el.specifications[index].wheelDiameter === filterWheelSizeValue)
+    bikes = priceValue ===0? [...bikes] : bikes.filter(el=>el.price>=priceValue)
     bikes = bikes.filter(el=>el.name.toLowerCase().includes(searchValue.toLowerCase()))
+
+
 
 
     return (

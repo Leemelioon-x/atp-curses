@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import FilterBar from "./components/filterBar/FilterBar";
 import {BikesContainer} from "./components/bikes/BilkesContainer";
 import {SearchBarContainer} from "./components/searchBar/SearchBarContainer";
+import {SortingPanelContainer} from "./components/sortingPanel/SortingPanelContainer";
 
 function App() {
     return (
@@ -13,8 +14,11 @@ function App() {
             <div className="Bikes_Content">
                 <FilterBar/>
                 <div className={"Bikes_Content_container"}>
-                <SearchBarContainer/>
-                <BikesContainer/>
+                    <div className={"Bikes_search"}>
+                    <SearchBarContainer/>
+                    <SortingPanelContainer/>
+                    </div>
+                    <BikesContainer/>
                 </div>
             </div>
         </div>
