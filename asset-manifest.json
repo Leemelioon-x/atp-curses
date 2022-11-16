@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/atp-curses/static/css/main.082e6a78.css",
+    "main.js": "/atp-curses/static/js/main.0c7abf0c.js",
+    "static/js/787.0ea4ee79.chunk.js": "/atp-curses/static/js/787.0ea4ee79.chunk.js",
+    "index.html": "/atp-curses/index.html",
+    "main.082e6a78.css.map": "/atp-curses/static/css/main.082e6a78.css.map",
+    "main.0c7abf0c.js.map": "/atp-curses/static/js/main.0c7abf0c.js.map",
+    "787.0ea4ee79.chunk.js.map": "/atp-curses/static/js/787.0ea4ee79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.082e6a78.css",
+    "static/js/main.0c7abf0c.js"
+  ]
+}
