@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import SuperSelect from "../superSelect/SuperSelect";
-import {sortedPriceValue} from "../../redux/BikesPage-reducer";
+
 
 type SortingPanelPropsType={
-    sortedPrice:sortedPriceValue,
-    setSortedPriceValue:(sortedPriceValue:sortedPriceValue)=>void
+    sortedPrice:string,
+    setSortedPriceValue:(sortedPriceValue:string)=>void
 }
 
 export const SortingPanel = ({sortedPrice,setSortedPriceValue}:SortingPanelPropsType) => {
@@ -12,10 +12,7 @@ export const SortingPanel = ({sortedPrice,setSortedPriceValue}:SortingPanelProps
     const [sortedPriceValue,setSortedPriceValuee]=useState(sortedValue[2])
 
     return (
-        <div>
-        <SuperSelect options={sortedValue} value={sortedPriceValue} onChangeOption={setSortedPriceValuee}/>
-       {/* <SuperSelect options={sortedValue} value={sortedPrice} onChangeOption={setSortedPriceValue}/>*/}
-        </div>
+      <SuperSelect options={sortedValue} value={sortedPriceValue} onChangeOption={setSortedPriceValuee}/>
     );
 };
 

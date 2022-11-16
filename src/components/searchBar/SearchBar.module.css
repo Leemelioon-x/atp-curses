@@ -1,6 +1,15 @@
-.search_container{
+.search_container {
     display: flex;
     width: 100%;
-   background: aquamarine;
+    background: aquamarine;
     height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_style {
+    width: 600px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
 }

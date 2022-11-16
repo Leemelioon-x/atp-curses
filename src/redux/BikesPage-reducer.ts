@@ -7,15 +7,13 @@ const BIKES_SEARCH = "BIKES_SEARCH";
 const SORTED_PRICE="SORTED_PRICE";
 const FILTER_PRICE="FILTER_PRICE"
 
-
-
 export type initialStateType = {
     bike: Array<bikeType>,
     filterTypeValue: filterTypeValue,
     filterBrandType: filterBrandTypeValue,
     filterWheelSize: filterWheelSizeValue,
     searchValue: string,
-    sortedPriceValue:sortedPriceValue,
+    sortedPriceValue:string,
     priceValue:number
 }
 export type bikeType = {
@@ -53,22 +51,21 @@ type bikesSearchACType = {
 }
 type sortedPriceACType={
     type: "SORTED_PRICE" ,
-    sortedPriceValue:sortedPriceValue
+    sortedPriceValue:string
 }
 type filterPriceACType={
     type: "FILTER_PRICE" ,
     PriceValue:number
 }
 
+
 export type filterTypeValue = "urban" | "hybrid" | "urban,hybrid" | "all"
 export type filterBrandTypeValue = "AIST" | "FORWARD" | "all"
 export type filterWheelSizeValue = 27.5 | 28 | "all"
-export type sortedPriceValue="Цена(сначала дешевые)"|"Цена(сначала дорогие)"|"all"
+/*export type sortedPriceValue="Цена(сначала дешевые)"|"Цена(сначала дорогие)"|"all"*/
 
 
 type ActionsType = changeBikesFilterACType | filterBikesByBrandACType | filterBikesByWheelSizeACType | bikesSearchACType|sortedPriceACType|filterPriceACType
-
-
 export const bikesPageReducer = (state: initialStateType = initialState, action: ActionsType): initialStateType => {
     switch (action.type) {
         case "CHANGE_BIKES_FILTER_TYPE":
@@ -105,8 +102,9 @@ export const bikesPageReducer = (state: initialStateType = initialState, action:
             return {
                 ...state,
                 priceValue:action.PriceValue
-
             }
+
+
         default:
             return state
     }
@@ -132,7 +130,7 @@ export const bikesSearchAC = (searchValue: string): bikesSearchACType => {
         type: BIKES_SEARCH, searchValue
     } as const
 }
-export const sortedPriceAC = (sortedPriceValue: sortedPriceValue): sortedPriceACType => {
+export const sortedPriceAC = (sortedPriceValue: string): sortedPriceACType => {
     return {
         type: SORTED_PRICE, sortedPriceValue
     } as const
@@ -142,4 +140,5 @@ export const filterPriceAC = (PriceValue: number): filterPriceACType => {
         type: FILTER_PRICE, PriceValue
     } as const
 }
+
 

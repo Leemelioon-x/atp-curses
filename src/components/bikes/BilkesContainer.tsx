@@ -12,7 +12,8 @@ type mapStateToPropsType={
     filterBrandTypeValue:filterBrandTypeValue,
     filterWheelSizeValue: filterWheelSizeValue,
     searchValue:string,
-    priceValue:number
+    priceValue:number,
+    sortedPriceValue:string
 
 
 }
@@ -28,8 +29,8 @@ const mapStateToProps=(state:storeType):mapStateToPropsType=>{
         filterBrandTypeValue:state.bikesPageReducer.filterBrandType,
         filterWheelSizeValue:state.bikesPageReducer.filterWheelSize,
         searchValue:state.bikesPageReducer.searchValue,
-        priceValue:state.bikesPageReducer.priceValue
-
+        priceValue:state.bikesPageReducer.priceValue,
+        sortedPriceValue:state.bikesPageReducer.sortedPriceValue
     }
 }
 

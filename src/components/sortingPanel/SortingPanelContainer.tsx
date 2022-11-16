@@ -3,15 +3,15 @@ import {Dispatch} from "redux";
 import {storeType} from "../../redux/redux-store";
 import {connect} from "react-redux";
 import {SortingPanel} from "./SortingPanel";
-import {sortedPriceAC, sortedPriceValue} from "../../redux/BikesPage-reducer";
+import {sortedPriceAC} from "../../redux/BikesPage-reducer";
 
 
 type mapStateToPropsType={
-    sortedPrice:sortedPriceValue
+    sortedPrice:string
 }
 
 type mapDispatchToProps={
-    setSortedPriceValue:(sortedPriceValue:sortedPriceValue)=>void
+    setSortedPriceValue:(sortedPriceValue:string)=>void
 }
 
 const mapStateToProps=(state:storeType):mapStateToPropsType=>{
@@ -22,7 +22,7 @@ const mapStateToProps=(state:storeType):mapStateToPropsType=>{
 
 const mapDispatchToProps=(dispatch:Dispatch):mapDispatchToProps=>{
     return {
-        setSortedPriceValue:(sortedPriceValue:sortedPriceValue)=>{
+        setSortedPriceValue:(sortedPriceValue:string)=>{
             dispatch(sortedPriceAC(sortedPriceValue))
         }
     }
